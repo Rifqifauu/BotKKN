@@ -34,7 +34,7 @@ def check_kuota():
 while True:
     try:
         check_kuota()
-        time.sleep(60)  # cek setiap 60 detik
+        time.sleep(300)  # cek setiap 300 detik
     except Exception as e:
         print("Error:", e)
-        time.sleep(60)
+        time.sleep(300)
