@@ -50,7 +50,7 @@ def check_kuota():
 while True:
     try:
         check_kuota()
-        time.sleep(10)
+        time.sleep(180)
     except Exception as e:
         print("Error:", e)
-        time.sleep(10)
+        time.sleep(180)
