@@ -31,7 +31,7 @@ def delete_telegram_message(message_id):
     Menghapus pesan dari channel Telegram berdasarkan message_id.
     """
     url = f"https://api.telegram.org/bot{TOKEN}/deleteMessage"
-    payload = {'chat_id': CHANNEL_ID, 'message_id': message_id}
+    payload = {'chat_id': CHAT_ID, 'message_id': message_id}
     response = requests.post(url, data=payload)
     if response.status_code != 200:
         response_json = response.json()
