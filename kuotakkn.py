@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 
 TOKEN = '8014051915:AAHUjqv6HolPnXUlFdNwKLw299OLdmVOpGk'
-CHAT_ID = '8014051915'
+CHAT_ID = '7456474633'
 URL = 'https://kkn.unsoed.ac.id/?KuotaKknSearch%5Bkode_fak%5D=H&KuotaKknSearch%5Bjenis_kkn_id%5D=1&KuotaKknSearch%5Bnegara_id%5D=&KuotaKknSearch%5Bkecamatan_id%5D=&KuotaKknSearch%5Bkuota%5D=&KuotaKknSearch%5Bterisi%5D='
 
 # Variabel global untuk menyimpan message_id terakhir
