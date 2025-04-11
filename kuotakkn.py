@@ -2,9 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-TOKEN = '7580988527:AAGgK5S3iF4gISAhqtNQLOMnXoJl0gDYPcw'
-CHANNEL_ID = '-1002393238668'
-
+TOKEN = '8014051915:AAHUjqv6HolPnXUlFdNwKLw299OLdmVOpGk'
+CHAT_ID = '#8014051915'
 URL = 'https://kkn.unsoed.ac.id/?KuotaKknSearch%5Bkode_fak%5D=H&KuotaKknSearch%5Bjenis_kkn_id%5D=1&KuotaKknSearch%5Bnegara_id%5D=&KuotaKknSearch%5Bkecamatan_id%5D=&KuotaKknSearch%5Bkuota%5D=&KuotaKknSearch%5Bterisi%5D='
 
 # Variabel global untuk menyimpan message_id terakhir
@@ -15,7 +14,7 @@ def send_telegram_message(message):
     Mengirim pesan ke channel Telegram dan mengembalikan message_id.
     """
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-    payload = {'chat_id': CHANNEL_ID, 'text': message, 'parse_mode': 'HTML'}
+    payload = {'chat_id': CHAT_ID, 'text': message, 'parse_mode': 'HTML'}
     response = requests.post(url, data=payload)
     response_json = response.json()
     
@@ -94,10 +93,10 @@ def main():
     while True:
         try:
             check_kuota()
-            time.sleep(60)  
+            time.sleep(30)  
         except Exception as e:
             print(f"Error: {e}")
-            time.sleep(60)
+            time.sleep(30)
 
 if __name__ == "__main__":
     main()
